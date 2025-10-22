@@ -1,0 +1,55 @@
+{
+  "name": "TypingSession",
+  "type": "object",
+  "properties": {
+    "user_email": {
+      "type": "string",
+      "description": "Email of the user"
+    },
+    "language": {
+      "type": "string",
+      "enum": [
+        "c",
+        "cpp",
+        "python",
+        "java",
+        "javascript"
+      ],
+      "description": "Programming language"
+    },
+    "code_snippet": {
+      "type": "string",
+      "description": "The code snippet that was typed"
+    },
+    "time_seconds": {
+      "type": "number",
+      "description": "Time taken in seconds"
+    },
+    "accuracy": {
+      "type": "number",
+      "description": "Accuracy percentage"
+    },
+    "wpm": {
+      "type": "number",
+      "description": "Words per minute"
+    },
+    "difficulty": {
+      "type": "string",
+      "enum": [
+        "easy",
+        "medium",
+        "hard"
+      ],
+      "default": "easy",
+      "description": "Difficulty level"
+    }
+  },
+  "required": [
+    "user_email",
+    "language",
+    "code_snippet",
+    "time_seconds",
+    "accuracy",
+    "wpm"
+  ]
+}

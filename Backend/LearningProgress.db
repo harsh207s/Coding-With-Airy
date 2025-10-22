@@ -1,0 +1,35 @@
+{
+  "name": "LearningProgress",
+  "type": "object",
+  "properties": {
+    "language": {
+      "type": "string",
+      "enum": [
+        "c",
+        "cpp",
+        "python",
+        "java",
+        "javascript"
+      ],
+      "description": "Programming language"
+    },
+    "lesson_id": {
+      "type": "string",
+      "description": "Unique identifier for the lesson"
+    },
+    "completed": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether the lesson is completed"
+    },
+    "user_email": {
+      "type": "string",
+      "description": "Email of the user who completed the lesson"
+    }
+  },
+  "required": [
+    "language",
+    "lesson_id",
+    "user_email"
+  ]
+}
